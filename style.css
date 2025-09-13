@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+body{
+    
+    font-family: "Inter", sans-serif;
+    background-color:var(--Navy950-Main-bBackground) ;
+
+}
+:root{
+    /*Primary*/
+    --Navy950-Main-bBackground: hsl(233, 47%, 7%);
+    --Blue950-Card-Background: hsl(244, 37%, 16%);
+     --Purple500-Accent: hsl(277, 64%, 61%);
+     /*Neutral*/
+    --White-Main-Beading-Stats: hsl(0, 0%, 100%);
+   --white-Main-Paragraph: hsla(0, 0%, 100%, 0.75);
+   --White-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+.card{
+    display:grid;
+    place-content: center;
+    height: 80vh;
+    font-size: 15px;
+
+}
+.row {
+    display:flex;
+    
+    grid-template-columns: repeat(2,1fr);
+    margin: 180px;;
+    
+    
+}
+
+.row
+.col2 {
+    position: relative;
+    
+    display: inline-block;
+
+}
+.row
+.col2::after
+{
+    content: "";
+    position: absolute;
+    left: 0;right: 0%;top:0%;bottom: 0%;
+    background:var(--Purple500-Accent);
+    
+    filter:contrast(10) opacity(0.7) brightness(20%)grayscale(10%)saturate(2)sepia(20%);
+    pointer-events: none;
+}
+.col{
+    background-color: var(--Blue950-Card-Background);
+    padding:60px;
+    
+}
+.col h1{
+     font-family: "Lexend Deca", sans-serif;
+     color: aliceblue;
+     
+}
+.col p{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: small;
+    opacity: 0.5;
+    line-height: 1.7;
+    
+}
+.link p{
+    margin-top:-13px;
+}
+.link h1{
+    font-weight: 400;
+}
+.col span{color: var(--Purple500-Accent);}
+
+.col .link
+{
+ display:flex;
+ justify-content: space-between;
+ margin-top: 40px;
+ 
+}
+.link
+a {
+    text-decoration: none;
+    color: white;
+
+}a
+h1{
+    transition: all ease;
+    animation: rose 0.5s 2s infinite;
+}
+
+@keyframes rose {
+    from{
+    color:rgba(red, green, blue, alpha);
+    }
+    to{
+        color: var(--Purple500-Accent);
+
+    }
+}
+@media(max-width:500px){
+    body{
+        margin: 70px;
+        
+        
+
+    }
+    
+    
+    .card {
+    width:240px;
+    display: grid;
+    margin-top: -200px;;
+    padding: 0 20px;;
+    
+    }
+    .row{
+        display:block;
+        width: 380px;;
+        text-align: center;;
+    }
+    
+    .col{
+        position: absolute;
+        top: 35%;
+        width:200px;
+        margin:0 30px;
+    
+    }
+    
+    .col h1, p{
+        margin: 0 -50px;
+        padding-top: 20px;;
+    }
+    
+
+    
+    .col
+    .link{
+        display: block;
+        
+    }
+    
+    
+    .col2{
+        
+        position: relative;
+    
+    }
+    
+    .edit {
+        width:320px;
+    
+    }
+    .at{
+        display: none;
+    }
+    
+}
+
+
+
+
+
